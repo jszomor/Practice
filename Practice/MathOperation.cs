@@ -8,27 +8,22 @@ namespace Practice
   {
     public double DoTheMath(char operation, double value1, double value2)
     {
-      //switch(operation)
-      //{
-      //  case '+':
-      //    return value1 + value2;
-      //  case '-':
-      //    return value1 - value2;
-      //  case '*':
-      //    return value1 * value2;
-      //  case '/':
-      //    return value1 / value2;
-      //  default:
-      //    return -1;
-      //}
-      return operation switch
+      switch (operation)
       {
-        '+' => value1 + value2,
-        '-' => value1 - value2,
-        '*' => value1 * value2,
-        '/' => value1 / value2,
-        _ => -1,
-      };
+        case '+': return value1 + value2;
+        case '-': return value1 - value2;
+        case '*': return value1 * value2;
+        case '/': return value1 / value2;
+        default: throw new ArgumentException("Invalid operation");
+      }
+      //return operation switch
+      //{
+      //  '+' => value1 + value2,
+      //  '-' => value1 - value2,
+      //  '*' => value1 * value2,
+      //  '/' => value1 / value2,
+      //  _ => -1,
+      //};
     }
   }
 }
